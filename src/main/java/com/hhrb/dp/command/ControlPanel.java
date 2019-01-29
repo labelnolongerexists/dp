@@ -19,13 +19,13 @@ public class ControlPanel {
     signalMap.put(SIGNAL_LOAD_SHIPMENT, () -> SpaceShip.getShip().load());
   }
 
-  public void sendSignal(int signal){
+  public void sendSignal(int signal) {
     this.signalMap.get(signal).act();
   }
 
 
   public static void main(String[] args) {
-    ControlPanel cp=new ControlPanel();
+    ControlPanel cp = new ControlPanel();
     cp.sendSignal(SIGNAL_INIT_LIGHT_SPEED_ENGINE);
   }
 
